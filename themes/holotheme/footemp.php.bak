@@ -1,0 +1,18 @@
+<?php
+/**
+ * @package WordPress
+ * @subpackage nada
+ */
+?>
+
+	</div><!-- #main -->
+
+	<div id="temp-footer" role="contentinfo">
+this website is evolving - check back very soon for updates!
+	</div><!-- #temp-footer -->
+</div><!-- #page -->
+
+<?php get_wp_footer(); ?>
+
+</body>
+</html>
