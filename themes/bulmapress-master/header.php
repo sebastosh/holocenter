@@ -25,17 +25,16 @@
 		<?php bulmapress_skip_link_screen_reader_text(); ?>
 		<header id="header">
 			<nav id="site-navigation" class="navbar" role="navigation">
-			<?php if ( get_header_image() ) : ?>
-			<div id="site-header">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-					<img src="<?php header_image(); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>" alt="Logo of <?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?> - <?php echo esc_attr( get_bloginfo( 'description', 'display' ) ); ?>">
-				</a>
-			</div>
-			<?php endif; ?>
+
 			
 				<div class="navbar-brand">
-					<?php bulmapress_home_link('navbar-item'); ?>
-					<?php bulmapress_blog_description('navbar-item is-muted'); ?>
+					<?php if ( get_header_image() ) : ?>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+							<img src="<?php header_image(); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>" alt="Logo of <?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?> - <?php echo esc_attr( get_bloginfo( 'description', 'display' ) ); ?>">
+						</a>
+					<?php endif; ?>
+					<!-- <?php bulmapress_home_link('navbar-item'); ?> -->
+					<!-- <?php bulmapress_blog_description('navbar-item is-muted'); ?> -->
 					<?php bulmapress_menu_toggle(); ?>
 				</div>
 				<div class="navbar-menu">

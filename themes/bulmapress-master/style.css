@@ -17,10 +17,3 @@ Main stylesheet: /frontend/bulmapress/css/bulmapress.css
 
 Bulma Sass: /frontend/bulma/sass/
 Bulmapress Sass: /frontend/bulmapress/sass/
-*/
-
-.navbar{
-  border: 1px solid;
-  display: flex;
-  justify-content: space-between; 
-}
