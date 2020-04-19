@@ -123,3 +123,6 @@ function cleaner_caption( $output, $attr, $content ) {
 	/* Return the formatted, clean caption. */
 	return $output;
 }
+
+// Featured Image Support
+add_theme_support( 'post-thumbnails' );

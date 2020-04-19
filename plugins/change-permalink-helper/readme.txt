@@ -2,7 +2,7 @@
 Contributors: inpsyde, Bueltge
 Tags: redirect, permalink, url, seo, 301
 Requires at least: 2.7
-Tested up to: 4.5
+Tested up to: 5.4
 Stable tag: trunk
 
 It checks the Permalink and redirects to the new URL, if it doesn't exist. It sends the header message "moved permanently 301"
@@ -21,18 +21,15 @@ When you change the permalink structure then this is a problem for bookmarks of 
 1. Thats all
 
 = Licence =
-Good news, this plugin is free for everyone! Since it's released under the GPL, you can use it free of charge on your personal or commercial blog. But if you enjoy this plugin, you can thank me and leave a [small donation](http://bueltge.de/wunschliste/ "Wishliste and Donate") for the time I've spent writing and supporting this plugin. And I really don't want to know how many hours of my life this plugin has already eaten ;)
+Good news, this plugin is free for everyone! Since it's released under the GPL, you can use it free of charge on your personal or commercial blog.
 
 = Translations =
 The plugin comes with various translations, please refer to the [WordPress Codex](http://codex.wordpress.org/Installing_WordPress_in_Your_Language "Installing WordPress in Your Language") for more information about activating the translation. If you want to help to translate the plugin to your language, please have a look at the .pot file which contains all defintions and may be used with a [gettext](http://www.gnu.org/software/gettext/) editor like [Poedit](http://www.poedit.net/) (Windows) or plugin for WordPress [Localization](http://wordpress.org/extend/plugins/codestyling-localization/).
 
-= Acknowledgements =
-* Lithuanian translation files by [Vincent G](http://www.host1plus.com)
-* Turkish translation files by [Selcuk Yahsi](htt://www.eniyiwebhosting.com)
-* French translation files by [noaneo](http://noaneo.fr/)
-* Polish translation by [Rachela](http://couponmachine.in)
-
 == Changelog ==
+= v1.1.0 (04/17/2020) =
+* Add support for URL parameter, Probs @sovok
+
 = v1.0.0 (05/16/2016) =
 * Update constructor for php7 usage.
 
