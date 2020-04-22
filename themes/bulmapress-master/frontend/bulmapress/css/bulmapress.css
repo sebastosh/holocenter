@@ -10549,6 +10549,11 @@ html {
   background: none;
 }
 
+html,
+body {
+  min-height: 100% !important;
+}
+
 .site {
   display: flex;
   flex-direction: column;
@@ -10630,20 +10635,31 @@ pre {
   padding-right: 2em;
 }
 
+.card-home {
+  width: 100%;
+  height: 100%;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid white;
+}
+
+.card-home .card-home-content {
+  padding: 1em;
+}
+
+.card-home .card-home-content a {
+  color: white;
+}
+
 .card {
   width: 100%;
   height: 100%;
   max-width: 720px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.card .card-image {
-  min-height: 200px;
-}
-
-.card .card-content {
-  min-height: 260px;
+  border: 1px solid white;
 }
 
 .card .card-content .title + .subtitle {
@@ -10652,6 +10668,14 @@ pre {
 
 .card .card-content .entry-footer {
   margin-top: 20px;
+}
+
+.card .card-home-content {
+  padding: 1em;
+}
+
+.card .card-home-content a {
+  color: white;
 }
 
 .card .image.is-square,

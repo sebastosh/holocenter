@@ -9,7 +9,7 @@
 ?>
 
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('card'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('card-home'); ?>>
 	<?php if ( has_post_thumbnail() ): ?>
 		<div class="card-image">
 			<figure class="image is-16by9">
@@ -19,7 +19,7 @@
 			</figure>
 		</div>
 	<?php endif; ?>
-	<div class="card-content">
+	<div class="card-home-content">
 		<div class="media">
 			<header class="media-content">
 					<?php bulmapress_the_title('is-3'); ?>
