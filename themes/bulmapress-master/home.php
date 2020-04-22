@@ -14,7 +14,7 @@
 ?>
 
 <?php get_header(); ?>
-RIGHT HERE
+
 <div id="primary" class="content-area">
 	<main id="main" class="site-main wrapper" role="main">
 		<?php if ( have_posts() ) : ?>
@@ -22,7 +22,7 @@ RIGHT HERE
 				<div class="columns is-multiline">
 					<?php
 						// The Query
-						$the_query = new WP_Query( array( 'category_name' => 'featured' ) );
+						$the_query = new WP_Query( array( 'tag' => 'featured' ) );
 					?>
 					
 					<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
