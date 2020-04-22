@@ -51,7 +51,7 @@ if ( ! function_exists( 'bulmapress_menu_toggle' ) ) {
 }
 
 if ( ! function_exists( 'bulmapress_copyright_link' ) ) {
-	function bulmapress_copyright_link($author = 'Bulmapress', $url = 'http://bulmapress.com')
+	function bulmapress_copyright_link($author = 'HoloCenter', $url = 'http://holocenter.org')
 	{
 		$output = '
 			<p class="copyright-link">&copy; '. date('Y') . '
