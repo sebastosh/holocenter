@@ -10718,6 +10718,15 @@ pre {
   color: white;
 }
 
+.home-video {
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
 img,
 figure {
   max-width: 100%;
@@ -10770,6 +10779,59 @@ figure.aligncenter {
 
 .archives .post:last-child {
   margin-bottom: 0;
+}
+
+.relatedposts {
+  padding: 50px 0;
+}
+
+.relatedposts h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+ul.related {
+  display: flex;
+  margin-left: 0;
+}
+
+ul.related li {
+  width: 33%;
+  display: block;
+  text-align: center;
+  margin-right: 12px;
+  line-height: 1.5em;
+}
+
+ul.related li:last-of-type {
+  margin-right: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  ul.related {
+    display: block;
+  }
+  ul.related li {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.entry-content ul.related {
+  display: block;
+}
+
+ul.related li {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #f8f8f8;
+}
+
+ul.related li img {
+  display: none;
 }
 
 .searchform .control.has-addons .input {
