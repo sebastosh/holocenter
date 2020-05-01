@@ -10567,6 +10567,7 @@ body {
 
 #header {
   flex-shrink: 0;
+  margin: 2em 1em 0;
 }
 
 h1 h1,
@@ -10725,6 +10726,28 @@ pre {
   right: 0;
   bottom: 0;
   left: 0;
+}
+
+.home-text {
+  color: white;
+  font-size: 1.1em;
+  margin: 0 0 2em;
+}
+
+.home-text p {
+  margin: .5em 0;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.navbar-brand .navbar-end:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.navbar-brand .navbar-item:hover {
+  background-color: rgba(0, 0, 0, 0);
 }
 
 img,
@@ -11044,6 +11067,14 @@ ul.related li img {
   background-color: rgba(0, 0, 0, 0);
 }
 
+.navbar-brand .navbar-end:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.navbar-brand .nav-item:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
+
 @media screen and (min-width: 1200px) {
   .navbar {
     margin: 0 auto;
@@ -11051,50 +11082,55 @@ ul.related li img {
   }
 }
 
-.navbar-brand .navbar-item:hover {
-  background: inherit;
+.navbar-brand .navbar-end:hover {
+  background-color: rgba(0, 0, 0, 0);
 }
 
-.navbar-item {
-  color: #7a7a7a;
+.navbar-brand .nav-item:hover {
+  background-color: rgba(0, 0, 0, 0);
 }
 
-.navbar-item.is-muted {
-  color: #333;
+.nav-item {
+  color: white;
+  margin: 0 0 0 1em;
+}
+
+.nav-item.is-muted {
+  color: white;
   opacity: .3;
 }
 
-.navbar-item.is-muted:hover {
-  color: #333;
+.nav-item.is-muted:hover {
+  color: #3273dc;
   opacity: .3;
 }
 
-.navbar-item.has-dropdown {
+.nav-item.has-dropdown {
   padding: 0;
 }
 
-.navbar-item:hover {
-  color: #363636;
-  background: inherit;
+.nav-item:hover {
+  color: #3273dc;
+  background-color: rgba(0, 0, 0, 0);
 }
 
-.navbar-item.is-active {
+.nav-item.is-active {
   color: #363636;
 }
 
-.navbar-item.is-tab {
+.nav-item.is-tab {
   border-bottom: 1px solid transparent;
   border-top: 1px solid transparent;
   padding-left: 12px;
   padding-right: 12px;
 }
 
-.navbar-item.is-tab:hover {
+.nav-item.is-tab:hover {
   border-bottom: 1px solid #3273dc;
   border-top: 1px solid transparent;
 }
 
-.navbar-item.is-tab.is-active {
+.nav-item.is-tab.is-active {
   border-bottom: 3px solid #3273dc;
   border-top: 3px solid transparent;
   color: #3273dc;
@@ -11144,6 +11180,7 @@ ul.related li img {
   position: absolute;
   width: 100%;
   z-index: 200;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 /*# sourceMappingURL=bulmapress.css.map */

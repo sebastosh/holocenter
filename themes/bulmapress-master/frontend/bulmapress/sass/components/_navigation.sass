@@ -9,6 +9,15 @@
 .navbar
   background-color: $nada
 
+.navbar-brand 
+  .navbar-end
+    &:hover
+      background-color: $nada
+  .nav-item
+    &:hover
+      background-color: $nada
+
+
 @media screen and (min-width: 1200px)
   .navbar
     margin: 0 auto
@@ -16,25 +25,29 @@
 
 
 .navbar-brand 
-  .navbar-item
+  .navbar-end
     &:hover
-      background: inherit
+      background-color: $nada
+  .nav-item
+    &:hover
+      background-color: $nada
 
-.navbar-item
-  color: $text-light
+.nav-item
+  color: $white
+  margin: 0 0 0 1em
   &.is-muted
-    color: #333
+    color: $white
     opacity: .3
     &:hover
-      color: #333
+      color: $link
       opacity: .3
 
   &.has-dropdown
     padding: 0
 
   &:hover
-    color: $link-hover
-    background: inherit
+    color: $blue
+    background-color: $nada
 
   // Modifiers
   &.is-active
@@ -92,3 +105,4 @@
     position: absolute
     width: 100%
     z-index: 200 
+    background-color: $nada
