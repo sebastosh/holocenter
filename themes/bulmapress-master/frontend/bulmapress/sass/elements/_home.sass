@@ -11,17 +11,21 @@
 .home-text 
   color: white
   font-size: 1.1em
-  margin: 0 0 2em 
+  margin: 0 auto 2em 
+  width: 50%
   p
     margin: .5em 0 
 
-.navbar
-  background-color: $nada
+.site-info
+  color: white   
+  img
+    margin: .5em
+    height: 30px
 
-.navbar-brand 
-  .navbar-end
-    &:hover
-      background-color: $nada
-  .navbar-item
-    &:hover
-      background-color: $nada
+@media only screen and (max-width: 600px)
+  .home-text 
+    margin: 4em auto 2em 
+    width: 90%
+
+  
+
