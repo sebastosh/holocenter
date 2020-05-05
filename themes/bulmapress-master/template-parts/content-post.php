@@ -29,10 +29,10 @@
 					<?php bulmapress_the_title('is-3'); ?>
 				<?php endif; ?>
 
-				<?php if ( 'post' === get_post_type() ) : ?>
+			<!-- 	<?php if ( 'post' === get_post_type() ) : ?>
 					<div class="subtitle is-6">
 						<?php bulmapress_posted_on(); ?>
-					</div><!-- .entry-meta -->
+					</div>.entry-meta -->
 				<?php endif; ?>
 			</header><!-- .entry-header -->
 		</div>
@@ -52,9 +52,41 @@
 		<?php else : ?>
 			<?php the_excerpt(); ?>
 		<?php endif; ?>
-		<div class="content entry-footer">
+	<!--	<div class="content entry-footer">
 			<small><?php bulmapress_entry_footer(); ?></small>
-		</div><!-- .entry-footer -->
+		</div> .entry-footer -->
+
+<div>
+
+
+<!-- Related Posts -->
+
+<?php 	
+    $post_objects = get_field('related_posts');
+    if( $post_objects ): ?>
+		
+<div class="relatedposts"><h3>More...</h3>
+    
+    <ul class="related">
+        <?php foreach( $post_objects as $post_object): ?>
+        <li>
+
+		<?php the_post_thumbnail(); ?>
+
+            <?php echo get_the_post_thumbnail( $post_object->ID ); ?><br />
+            <a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID); ?></a>
+        </li>
+        <?php endforeach; ?>
+    </ul>
+    
+    </div>
+    <?php endif; ?>
+	<!-- End Related Posts -->
+
+</div>
+
+
+
 	</div><!-- .entry-content -->
 </div>
 

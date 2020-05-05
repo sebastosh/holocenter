@@ -13,12 +13,12 @@ get_header(); ?>
 	<main id="main" class="site-main wrapper" role="main">
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php get_template_part( 'template-parts/content', 'post' ); ?>
-			<div class="section">
+			<!-- <div class="section">
 				<div class="container is-narrow">
 					<?php the_post_navigation();?>
 				</div>
 			</div>
-			<?php bulmapress_get_comments(); ?>
+			<?php bulmapress_get_comments(); ?>-->
 		<?php endwhile; ?>
 	</main><!-- #main -->
 </div><!-- #primary -->

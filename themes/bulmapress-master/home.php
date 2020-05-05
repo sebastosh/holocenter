@@ -15,10 +15,23 @@
 
 <?php get_header(); ?>
 
+
+
 <div id="primary" class="content-area">
+
 	<main id="main" class="site-main wrapper" role="main">
+
+
+
 		<?php if ( have_posts() ) : ?>
 			<div class="container">
+
+<div class="home-text"> 	<?php
+ $name = "home";
+ $page = get_page_by_path($name);
+ echo apply_filters('the_content', $page->post_content);
+ ?></div>
+	
 				<div class="columns is-multiline">
 					<?php
 						// The Query

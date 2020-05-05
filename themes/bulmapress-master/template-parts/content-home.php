@@ -14,8 +14,9 @@
 		<div class="card-image">
 			<figure class="image is-16by9">
 				
-					<?php the_post_thumbnail('widget'); ?>
+			<a href="<?php the_permalink() ?>" class="alignnone" title="<?php the_title(); ?>"><?php the_post_thumbnail('widget'); ?></a>
 		
+
 			</figure>
 		</div>
 	<?php endif; ?>

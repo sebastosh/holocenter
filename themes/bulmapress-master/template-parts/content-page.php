@@ -9,18 +9,35 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('section'); ?>>
-	<div class="container content">
+	<div class="container">
 		<header class="entry-header">
-			<?php the_title( '<h1 class="title is-1 entry-title">', '</h1>' ); ?>
+			<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
 		</header><!-- .entry-header -->
-
-		<div class="content entry-content">
+		<div class="card">
+		<div class="content page-content">
 			<?php the_content();?>
 
-			<?php wp_link_pages( array(
-				'before' => '<div class="page-links level">' . esc_html__( 'Pages:', 'bulmapress' ),
-				'after'  => '</div>',
-				) ); ?>
+
+<!-- Related Posts -->
+<?php 	
+    $post_objects = get_field('related_posts');
+    if( $post_objects ): ?>
+		
+<div class="relatedposts"><h3><?php the_field('related_post_title'); ?></h3>
+    
+    <ul class="related">
+        <?php foreach( $post_objects as $post_object): ?>
+        <li>
+            <?php echo get_the_post_thumbnail( $post_object->ID, 'thumbnail' ); ?><br />
+            <a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID); ?></a>
+        </li>
+        <?php endforeach; ?>
+    </ul>
+    
+    </div>
+    <?php endif; ?>
+
+<!-- End Related Posts -->
 
 			</div><!-- .entry-content -->
 
@@ -39,5 +56,6 @@
 						?>
 					</footer><!-- .entry-footer -->
 				<?php endif; ?>
+			</div>
 			</div>
 		</article><!-- #post-## -->
