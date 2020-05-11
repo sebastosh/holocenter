@@ -65,25 +65,23 @@
     $post_objects = get_field('related_posts');
     if( $post_objects ): ?>
 		
-<div class="relatedposts"><h3>More...</h3>
+<h3>More...</h3>
     
-    <ul class="related">
+    <div class="columns is-multiline">
         <?php foreach( $post_objects as $post_object): ?>
-        <li>
+        <div class="column is-one-third">
+			<a href="<?php echo get_permalink($post_object->ID); ?>">
+			<?php echo get_the_post_thumbnail( $post_object->ID, 'related' ); ?>
 
-		<?php the_post_thumbnail(); ?>
-
-            <?php echo get_the_post_thumbnail( $post_object->ID ); ?><br />
-            <a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID); ?></a>
-        </li>
+			<?php echo get_the_title($post_object->ID); ?></a>
+        </div>
         <?php endforeach; ?>
-    </ul>
+    </div>
     
     </div>
     <?php endif; ?>
 	<!-- End Related Posts -->
 
-</div>
 
 
 

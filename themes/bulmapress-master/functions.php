@@ -207,3 +207,13 @@ function tags_support_query($wp_query) {
 // tag hooks
 add_action('init', 'tags_support_all');
 add_action('pre_get_posts', 'tags_support_query');
+
+function debug_to_console( $data ) {
+	if ( is_array( $data ) )
+	 $output = "<script>console.log( 'Debug Objects: " . implode( ',', $data) . "' );</script>";
+	 else
+	 $output = "<script>console.log( 'Debug Objects: " . $data . "' );</script>";
+	echo $output;
+	}
+
+	add_image_size( 'custom-image-square', 600, 600, true );

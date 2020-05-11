@@ -8,6 +8,7 @@
  */
 ?>
 
+
 <article id="post-<?php the_ID(); ?>" <?php post_class('card-home'); ?>>
 	<?php if ( has_post_thumbnail() ): ?>
 		<div class="card-image">
@@ -21,7 +22,7 @@
 	<?php endif; ?>
 	<div class="card-home-content">
 		<div class="media">
-			<header class="media-content">
+			<header class="card-header-title is-centered">
 					<?php bulmapress_the_title('is-3'); ?>
 			</header><!-- .entry-header -->
 		</div>

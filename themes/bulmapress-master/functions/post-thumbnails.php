@@ -17,3 +17,5 @@
 add_theme_support( 'post-thumbnails' );
 
 add_image_size( 'widget', '400', '300', $crop = true );
+
+add_image_size( 'related', '400', '400', $crop = true );

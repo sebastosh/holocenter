@@ -38,9 +38,23 @@
 						$the_query = new WP_Query( array( 'tag' => 'featured' ) );
 					?>
 					
-					<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-						<div class="column is-one-third">
-							<?php get_template_part( 'template-parts/content', 'home' ); ?>
+					<?php while ( $the_query->have_posts() ) : $the_query->the_post(); 
+									$cardclass = ($the_query->post_count == 1) ? 'home-one'  : 'home';
+									
+									if($the_query->post_count == 1) {
+										$class = 'is-full';
+									} else if ($the_query->post_count == 2 ) {
+										$class = 'is-one-half';
+									} else if ($the_query->post_count == 3 ) {
+										$class = 'is-one-third';
+									} else if ($the_query->post_count == 4 ) {
+										$class = 'is-one-quarter';
+									} else {
+										$class = 'is-one-half';
+									}
+					?>
+						<div class="column <?php echo $class; ?>">
+							<?php get_template_part( 'template-parts/content', $cardclass ); ?>
 						</div>
 					<?php endwhile; ?>
 				</div>
