@@ -217,3 +217,21 @@ function debug_to_console( $data ) {
 	}
 
 	add_image_size( 'custom-image-square', 600, 600, true );
+
+	/**
+ * Order posts by the last word in the post_title. 
+ * Activated when orderby is 'last_name' 
+ * 
+ */
+add_filter( 'posts_orderby', function( $orderby, \WP_Query $q )
+{
+    if( 'last_name' === $q->get( 'orderby' ) && $get_order =  $q->get( 'order' ) )
+    {
+        if( in_array( strtoupper( $get_order ), ['ASC', 'DESC'] ) )
+        {
+            global $wpdb;
+            $orderby = " SUBSTRING_INDEX( {$wpdb->posts}.post_title, ' ', -1 ) " . $get_order;
+        }
+    }
+    return $orderby;
+}, PHP_INT_MAX, 2 );

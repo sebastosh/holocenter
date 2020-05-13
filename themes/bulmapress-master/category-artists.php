@@ -39,7 +39,23 @@ foreach($categories as $category) {
 			</header><!-- .page-header -->
 
 		<div class="columns is-multiline">
-			<?php while ( have_posts() ) : the_post(); ?>
+		<?php
+
+			// args  
+			$args = [
+				'post_type'     => 'post',
+				'category_name' => 'artists, hologram-artists, space-light-artists',
+				'orderby'       => 'last_name', //<-- Custom ordering in functions.php!
+				'order'         => 'ASC'
+			];
+
+			// query
+			$the_query = new WP_Query( $args );
+				
+		?>
+
+
+			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 				<div class="column is-one-third">
 					<?php get_template_part( 'template-parts/content', 'archive' ); ?>
 				</div>
@@ -60,24 +76,3 @@ foreach($categories as $category) {
 
 <?php get_sidebar(); ?>
 <?php get_footer();?>
-
-<?php get_search_form(); ?>
-
-<div>
-<form role="search" method="get" id="searchform" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" >
-<h2 class="widget-title is-bold">Searchie Searchie</h2>
-<div class="control has-addons">
-<label class="screen-reader-text" for="s">' . __( 'Search for:' ) . '</label>
-<input type="hidden" name="cat" id="cat" value="20" />
-<input class="input" type="text" value="Search" name="s" id="s" />
-<input class="button" type="submit" id="searchsubmit" value="Search" />
-</div>
-</form>
-</div>
-<div>
-<form method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-<input type="hidden" name="cat" id="cat" value="20" />
-<input type="text" size="16" name="s" value="Search"  />
-<input type="submit" value="Go" />
-</form>
-</div>

@@ -24,7 +24,7 @@ Bulmapress Sass: /frontend/bulmapress/sass/
 figure.wp-block-embed.is-type-video {
     position: relative;
     width: 90%;
-    height: 0;
+    height: auto;
     padding-bottom: 56.25%; /*16:9*/
 }
 figure.wp-block-embed.is-type-video iframe {
